@@ -1,34 +1,40 @@
-// Copyright Alex Dean (c) 2012
-// Original code taken from: http://learn.adafruit.com/tmp36-temperature-sensor/using-a-temp-sensor
+// (c) Copyright Alex Dean 2012
+// Released under Apache License, version 2.0
+//
+// Adapted from:
+// * http://learn.adafruit.com/tmp36-temperature-sensor/using-a-temp-sensor
+// * http://exosite.com/project/basic-arduino-temperature-web-monitor
+
+#include <Ethernet.h>
 
 /*
  * Arduino configuration
  */
 
 // MAC address of this Arduino
-byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED }; // TODO: update this when my Arduino arrives
+const byte kMac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED }; // TODO: update this when my Arduino arrives
 
 // The analog pin to which the TMP36's Vout (sense) pin is connected
-int sensorPin = 0;
+const int kSensorPin = 0;
 
 // The Arduino voltage (either 5.0 or a more accurate 3.3)
-float arduinoV = 5.0;
+const float kArduinoV = 5.0;
 
 /*
  * Tracking configuration
  */
 
 // Frequency of taking temperature readings, in seconds
-int readingFreq = 15;
+const int kReadingFreq = 15;
 
 // SnowPlow CloudFront collector subdomain
-const char* snowplowCfSubdomain = "TODO";
+const char kSnowplowCfSubdomain[] = "TODO";
 
 // SnowPlow app name
-const char* snowplowAppName = "alex-flat";
+const char kSnowplowAppName[] = "alex-flat";
 
 // SnowPlow instance name
-const char* snowplowInstanceName = "living-room";
+const char kSnowplowInstanceName[] = "living-room";
 
 /*
  * setup() runs once when you turn your
@@ -46,7 +52,15 @@ void setup()
   Serial.begin(9600);
 
   // Required if setting the ARef to something other than 5v
-  analogReference(arduinoV);
+  analogReference(kArduinoV);
+
+  // Boot Ethernet using DHCP
+  // TODO: move into SnowPlow tracker init?
+  while (Ethernet.begin(mac) != 1)
+  {
+    Serial.println("Error getting IP address via DHCP, trying again...");
+    delay(15000);
+  } 
 
   // Setup SnowPlow Arduino tracker
   // TODO
@@ -63,17 +77,23 @@ void setup()
  */
 void loop()
 {
-  // Get the temperature
-  float tempC = readTempInC(sensorPin, arduinoV);
-  
-  // Debug
-  Serial.print(temperatureC); Serial.println(" degrees C");
+  // When did we run last? 
+  static unsigned long prevTime = 0;
 
-  // Track via SnowPlow
-  // TODO
+  if (millis() - prevTime >= (kReadingFreq * 1000))
+  {
+    // Get the temperature
+    float tempC = readTempInC(kSensorPin, kArduinoV);
+    
+    // Debug
+    Serial.print(tempC); Serial.println(" degrees C");
 
-  delay(readingFreq * 1000); // Wait to run again
-  // TODO: fix this so it runs every minute, not a minute between runs (not the same thing)
+    // Track via SnowPlow
+    // TODO
+
+    prevTime = millis();
+    delay(500); // Running loop twice a sec is fine
+  }
 }
 
 /*
