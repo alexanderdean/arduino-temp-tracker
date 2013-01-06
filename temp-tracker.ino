@@ -1,3 +1,5 @@
+// Copyright Alex Dean (c) 2012
+
 //TMP36 Pin Variables
 int sensorPin = 0; //the analog pin the TMP36's Vout (sense) pin is connected to
                         //the resolution is 10 mV / degree centigrade with a
@@ -35,4 +37,14 @@ void loop()                     // run over and over again
  Serial.print(temperatureF); Serial.println(" degrees F");
  
  delay(1000);                                     //waiting a second
+}
+
+/*
+ * Gets the temperature in Celsius
+ * from a TMP36 temperature sensor
+ */
+float getTMP36TempInC(int sensorPin)
+{
+  // Get the voltage reading from the TMP36 temperature sensor
+  int voltage = analogRead(sensorPin);
 }
