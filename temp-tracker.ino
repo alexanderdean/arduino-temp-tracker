@@ -6,6 +6,7 @@
 // * http://exosite.com/project/basic-arduino-temperature-web-monitor
 
 #include <Ethernet.h>
+// #include <SnowPlow.h>
 
 /*
  * Arduino configuration
@@ -27,14 +28,17 @@ const float kArduinoV = 5.0;
 // Frequency of taking temperature readings, in seconds
 const int kReadingFreq = 15;
 
-// SnowPlow CloudFront collector subdomain
-const char kSnowplowCfSubdomain[] = "TODO";
-
 // SnowPlow app name
 const char kSnowplowAppName[] = "alex-flat";
 
-// SnowPlow instance name
-const char kSnowplowInstanceName[] = "living-room";
+// SnowPlow CloudFront collector subdomain
+const char kSnowplowCfSubdomain[] = "TODO";
+
+// SnowPlow user ID (to identify this specific Arduino)
+const char kSnowplowUserId[] = "living-room";
+
+// SnowPlow Tracker
+// SnowPlowTracker snowplow(&Ethernet, kMac, kSnowplowAppName);
 
 /*
  * setup() runs once when you turn your
@@ -54,16 +58,11 @@ void setup()
   // Required if setting the ARef to something other than 5v
   analogReference(kArduinoV);
 
-  // Boot Ethernet using DHCP
-  // TODO: move into SnowPlow tracker init?
-  while (Ethernet.begin(mac) != 1)
-  {
-    Serial.println("Error getting IP address via DHCP, trying again...");
-    delay(15000);
-  } 
-
   // Setup SnowPlow Arduino tracker
-  // TODO
+  /*
+  snowplow.initCf(kSnowplowCfSubdomain);
+  snowplow.setUserId(kSnowplowUserId); // If not set, defaults to Mac address.
+  */
 }
  
 /*
@@ -89,7 +88,9 @@ void loop()
     Serial.print(tempC); Serial.println(" degrees C");
 
     // Track via SnowPlow
-    // TODO
+    /*
+    snowplow.trackEvent("readings", "temp", tempC);
+    */
 
     prevTime = millis();
     delay(500); // Running loop twice a sec is fine
