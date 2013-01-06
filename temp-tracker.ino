@@ -94,13 +94,12 @@ void loop()
 float readTempInC(int sensorPin, float arduinoVoltage)
 {
   // Get the voltage reading from the TMP36
-  int voltage = analogRead(sensorPin);
+  int reading = analogRead(sensorPin);
 
   // Convert that reading to voltage
   float voltage = (reading * arduinoVoltage) / 1024;
 
   // Convert from 10 mv per degree with 500 mV offset
   // to degrees: (voltage - 500mV) times 100
-  float tempC = (voltage - 0.5) * 100 ;
-  return tempC;
+  return (float)((voltage - 0.5) * 100);
 }
