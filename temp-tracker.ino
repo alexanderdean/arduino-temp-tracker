@@ -1,9 +1,26 @@
-// (c) Copyright Alex Dean 2012
-// Released under Apache License, version 2.0
-//
-// Adapted from:
-// * http://learn.adafruit.com/tmp36-temperature-sensor/using-a-temp-sensor
-// * http://exosite.com/project/basic-arduino-temperature-web-monitor
+/* 
+ * Arduino Temperature Tracker
+ *
+ * A temperature monitor for Arduino using a TMP36
+ * temperature sensor and the SnowPlow Arduino
+ * Tracker (https://github.com/snowplow/snowplow-arduino-tracker). 
+ *
+ * Adapted from:
+ *
+ * * http://learn.adafruit.com/tmp36-temperature-sensor/using-a-temp-sensor
+ * * http://exosite.com/project/basic-arduino-temperature-web-monitor
+ *
+ * Copyright (c) 2012 Alexander Dean. All rights reserved.
+ *
+ * This program is licensed to you under the Apache License Version 2.0,
+ * and you may not use this file except in compliance with the Apache License Version 2.0.
+ * You may obtain a copy of the Apache License Version 2.0 at http://www.apache.org/licenses/LICENSE-2.0.
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the Apache License Version 2.0 is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the Apache License Version 2.0 for the specific language governing permissions and limitations there under.
+ */
 
 #include <Ethernet.h>
 // #include <SnowPlow.h>
