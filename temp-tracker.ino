@@ -1,12 +1,35 @@
 // Copyright Alex Dean (c) 2012
 // Original code taken from: http://learn.adafruit.com/tmp36-temperature-sensor/using-a-temp-sensor
 
+/*
+ * Arduino configuration
+ */
+
+// MAC address of this Arduino
+byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED }; // TODO: update this when my Arduino arrives
+
 // The analog pin to which the TMP36's Vout (sense) pin is connected
 int sensorPin = 0;
 
 // The Arduino voltage (either 5.0 or a more accurate 3.3)
 float arduinoV = 5.0;
- 
+
+/*
+ * Tracking configuration
+ */
+
+// Frequency of taking temperature readings, in seconds
+int readingFreq = 15;
+
+// SnowPlow CloudFront collector subdomain
+const char* snowplowCfSubdomain = "TODO";
+
+// SnowPlow app name
+const char* snowplowAppName = "alex-flat";
+
+// SnowPlow instance name
+const char* snowplowInstanceName = "living-room";
+
 /*
  * setup() runs once when you turn your
  * Arduino on: use it to initialize and
@@ -41,7 +64,7 @@ void setup()
 void loop()
 {
   // Get the temperature
-  float tempC = getTMP36TempInC(sensorPin, arduinoV);
+  float tempC = readTempInC(sensorPin, arduinoV);
   
   // Debug
   Serial.print(temperatureC); Serial.println(" degrees C");
@@ -49,7 +72,7 @@ void loop()
   // Track via SnowPlow
   // TODO
 
-  delay(60000); // Wait a minute
+  delay(readingFreq * 1000); // Wait to run again
   // TODO: fix this so it runs every minute, not a minute between runs (not the same thing)
 }
 
@@ -68,7 +91,7 @@ void loop()
  * arduinoVoltage is the voltage the
  * Arduino runs on.
  */
-float getTMP36TempInC(int sensorPin, float arduinoVoltage)
+float readTempInC(int sensorPin, float arduinoVoltage)
 {
   // Get the voltage reading from the TMP36
   int voltage = analogRead(sensorPin);
