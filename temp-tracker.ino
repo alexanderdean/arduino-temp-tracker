@@ -1,50 +1,83 @@
 // Copyright Alex Dean (c) 2012
+// Original code taken from: http://learn.adafruit.com/tmp36-temperature-sensor/using-a-temp-sensor
 
-//TMP36 Pin Variables
-int sensorPin = 0; //the analog pin the TMP36's Vout (sense) pin is connected to
-                        //the resolution is 10 mV / degree centigrade with a
-                        //500 mV offset to allow for negative temperatures
+// The analog pin to which the TMP36's Vout (sense) pin is connected
+int sensorPin = 0;
+
+// The Arduino voltage (either 5.0 or a more accurate 3.3)
+float arduinoV = 5.0;
  
 /*
- * setup() - this function runs once when you turn your Arduino on
- * We initialize the serial connection with the computer
+ * setup() runs once when you turn your
+ * Arduino on: use it to initialize and
+ * set any initial values.
+ *
+ * We initialize the serial connection
+ * with the computer, the voltage to use
+ * with ARef, and the SnowPlow Arduino
+ * tracker.
  */
 void setup()
 {
-  Serial.begin(9600);  //Start the serial connection with the computer
-                       //to view the result open the serial monitor 
+  // Serial connection lets us debug on the computer
+  Serial.begin(9600);
+
+  // Required if setting the ARef to something other than 5v
+  analogReference(arduinoV);
+
+  // Setup SnowPlow Arduino tracker
+  // TODO
 }
  
-void loop()                     // run over and over again
+/*
+ * loop() runs over and over again.
+ * An empty loop() takes just a few
+ * clock cycles to complete.
+ *
+ * We use loop() to measure the
+ * temperature every minute and log
+ * it to SnowPlow.
+ */
+void loop()
 {
- //getting the voltage reading from the temperature sensor
- int reading = analogRead(sensorPin);  
- 
- // converting that reading to voltage, for 3.3v arduino use 3.3
- float voltage = reading * 5.0;
- voltage /= 1024.0; 
- 
- // print out the voltage
- Serial.print(voltage); Serial.println(" volts");
- 
- // now print out the temperature
- float temperatureC = (voltage - 0.5) * 100 ;  //converting from 10 mv per degree wit 500 mV offset
-                                               //to degrees ((volatge - 500mV) times 100)
- Serial.print(temperatureC); Serial.println(" degrees C");
- 
- // now convert to Fahrenheight
- float temperatureF = (temperatureC * 9.0 / 5.0) + 32.0;
- Serial.print(temperatureF); Serial.println(" degrees F");
- 
- delay(1000);                                     //waiting a second
+  // Get the temperature
+  float tempC = getTMP36TempInC(sensorPin, arduinoV);
+  
+  // Debug
+  Serial.print(temperatureC); Serial.println(" degrees C");
+
+  // Track via SnowPlow
+  // TODO
+
+  delay(60000); // Wait a minute
+  // TODO: fix this so it runs every minute, not a minute between runs (not the same thing)
 }
 
 /*
- * Gets the temperature in Celsius
- * from a TMP36 temperature sensor
+ * Gets the temperature in Celsius from
+ * a TMP36 temperature sensor.
+ *
+ * The resolution is 10 mV / degree
+ * centigrade with a 500 mV offset
+ * to allow for negative temperatures.
+ *
+ * sensorPin is the analog pin which the
+ * TMP36's Vout (sense) pin is connected
+ * to.
+ *
+ * arduinoVoltage is the voltage the
+ * Arduino runs on.
  */
-float getTMP36TempInC(int sensorPin)
+float getTMP36TempInC(int sensorPin, float arduinoVoltage)
 {
-  // Get the voltage reading from the TMP36 temperature sensor
+  // Get the voltage reading from the TMP36
   int voltage = analogRead(sensorPin);
+
+  // Convert that reading to voltage
+  float voltage = (reading * arduinoVoltage) / 1024;
+
+  // Convert from 10 mv per degree with 500 mV offset
+  // to degrees: (voltage - 500mV) times 100
+  float tempC = (voltage - 0.5) * 100 ;
+  return tempC;
 }
