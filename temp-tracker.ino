@@ -74,7 +74,10 @@ void setup()
   Serial.begin(9600);
 
   // Required if setting the ARef to something other than 5v
-  analogReference(kArduinoV);
+  if (kArduinoV != 5.0)
+  {
+    analogReference(EXTERNAL);
+  }
 
   // Setup SnowPlow Arduino tracker
   /*
