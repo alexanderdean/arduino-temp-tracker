@@ -110,8 +110,8 @@ void loop()
     */
 
     prevTime = millis();
-    delay(500); // Running loop twice a sec is fine
   }
+  delay(500); // Running loop twice a sec is fine
 }
 
 /*
