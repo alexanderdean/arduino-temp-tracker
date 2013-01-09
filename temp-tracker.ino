@@ -37,7 +37,7 @@ const byte kMac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED }; // TODO: update this
 const int kSensorPin = 0;
 
 // The Arduino voltage (either 5.0 or a more accurate 3.3)
-const float kArduinoV = 5.0;
+const float kArduinoV = 3.3;
 
 /*
  * Tracking configuration
