@@ -31,7 +31,7 @@
  */
 
 // MAC address of this Arduino
-const byte kMac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED }; // TODO: update this when my Arduino arrives
+const byte kMac[] = { 0x90, 0xA2, 0xDA, 0x00, 0xF8, 0xA0 };
 
 // The analog pin to which the TMP36's Vout (sense) pin is connected
 const int kSensorPin = 0;
