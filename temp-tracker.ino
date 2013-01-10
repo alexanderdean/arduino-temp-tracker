@@ -27,33 +27,33 @@
 // #include <SnowPlow.h>
 
 /*
- * Arduino configuration
+ * UPDATE THESE FOR YOUR SKETCH
  */
 
 // MAC address of this Arduino
 const byte kMac[] = { 0x90, 0xA2, 0xDA, 0x00, 0xF8, 0xA0 };
-
-// The analog pin to which the TMP36's Vout (sense) pin is connected
-const int kSensorPin = 0;
-
-// The Arduino voltage (either 5.0 or a more accurate 3.3)
-const float kArduinoV = 3.3;
-
-/*
- * Tracking configuration
- */
-
-// Frequency of taking temperature readings, in seconds
-const int kReadingFreq = 15;
-
-// SnowPlow app name
-const char kSnowplowAppName[] = "alex-flat";
 
 // SnowPlow CloudFront collector subdomain
 const char kSnowplowCfSubdomain[] = "TODO";
 
 // SnowPlow user ID (to identify this specific Arduino)
 const char kSnowplowUserId[] = "living-room";
+
+/*
+ * You probably won't have to update these
+ */
+
+// The Arduino voltage (either 5.0 or a more accurate 3.3)
+const float kArduinoV = 3.3;
+
+// The analog pin to which the TMP36's Vout (sense) pin is connected
+const int kSensorPin = 0;
+
+// Frequency of taking temperature readings, in seconds
+const int kReadingFreq = 60;
+
+// SnowPlow app name
+const char kSnowplowAppName[] = "arduino-temp-tracker";
 
 // SnowPlow Tracker
 // SnowPlowTracker snowplow(&Ethernet, kMac, kSnowplowAppName);

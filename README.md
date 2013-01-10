@@ -1,4 +1,64 @@
 arduino-temp-tracker
 ====================
 
-Arduino sketch to take temperature and log to SnowPlow
+# Arduino Temperature Tracker
+
+## Introduction
+
+This is a simple Arduino sketch to take a room's temperature every minute and log it to [SnowPlow] [snowplow] using the [SnowPlow Arduino Tracker] [snowplow-arduino-tracker].
+
+## Installation
+
+## 1. Requirements
+
+To run this sketch, you will need the following hardware:
+
+* 1 x Arduino (I used an [Arduino Uno] [arduino-uno])
+* 1 x Ethernet or WiFi shield for Arduino (I used an [Ethernet shield] [ethernet-shield])
+* 1 x [TMP36] [tmp36] temperature sensor
+
+Many Arduino starter kits include the TMP36 sensor and instructions on configuring it (e.g. the [Oomlout Starter Kit] [oomlout-starter-kit]).
+
+In software terms, you will need:
+
+* <<Something about SnowPlow library>>
+* A running SnowPlow collector
+
+We recommend setting up the SnowPlow CloudFront Collector as it is the simplest collector. There is a guide to setting this up on the SnowPlow wiki: [Setting up the Cloudfront collector] [cf-collector-setup]. 
+
+## 2. Making
+
+First, ...
+
+## 3. Running
+
+Right, ...
+
+## Roadmap
+
+Nothing planned. Hopefully this project inspires people to try monitoring their own home/factory/shop using Arduino and SnowPlow!
+
+## Copyright and license
+
+Arduino Temperature Tracker is copyright 2013 Alexander Dean.
+
+Licensed under the [Apache License, Version 2.0] [license] (the "License");
+you may not use this software except in compliance with the License.
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+[snowplow]: http://snowplowanalytics.com/
+[snowplow-arduino-tracker]: https://github.com/snowplow/snowplow-arduino-tracker
+
+[arduino-uno]: http://arduino.cc/en/Main/arduinoBoardUno
+[ethernet-shield]: http://arduino.cc/en/Main/ArduinoEthernetShield
+[tmp36]: http://adafruit.com/products/165
+[oomlout-starter-kit]: http://oomlout.co.uk/starter-kit-for-arduino-ardx-p-183.html
+
+[cf-collector-setup]: https://github.com/snowplow/snowplow/wiki/setting-up-the-cloudfront-collector
+
+[license]: http://www.apache.org/licenses/LICENSE-2.0
