@@ -19,9 +19,9 @@ Many Arduino starter kits include the TMP36 sensor and instructions on configuri
 In software terms, you will need:
 
 * <<Something about SnowPlow library>>
-* A running SnowPlow collector
+* A running SnowPlow event collector (to receive events sent by the Arduino Tracker)
 
-If you are not already running SnowPlow, we recommend setting up the CloudFront Collector, which is the simplest collector. Checkout the guide here: [Setting up the Cloudfront Collector] [cf-collector-setup]. 
+If you are not already running SnowPlow, we recommend setting up the CloudFront-based event collector, which is SnowPlow's simplest collector. Checkout the guide here: [Setting up the Cloudfront Collector] [cf-collector-setup]. 
 
 ## 2. Making
 
