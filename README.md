@@ -21,7 +21,7 @@ In software terms, you will need:
 * <<Something about SnowPlow library>>
 * A running SnowPlow collector
 
-If you are not already running SnowPlow, we recommend setting up the SnowPlow CloudFront Collector, which is the simplest collector. There is a setup guide here: [Setting up the Cloudfront collector] [cf-collector-setup]. 
+If you are not already running SnowPlow, we recommend setting up the CloudFront Collector, which is the simplest collector. Checkout the guide here: [Setting up the Cloudfront Collector] [cf-collector-setup]. 
 
 ## 2. Making
 
