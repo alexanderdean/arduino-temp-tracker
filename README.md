@@ -1,6 +1,3 @@
-arduino-temp-tracker
-====================
-
 # Arduino Temperature Tracker
 
 ## Introduction
@@ -24,7 +21,7 @@ In software terms, you will need:
 * <<Something about SnowPlow library>>
 * A running SnowPlow collector
 
-We recommend setting up the SnowPlow CloudFront Collector as it is the simplest collector. There is a guide to setting this up on the SnowPlow wiki: [Setting up the Cloudfront collector] [cf-collector-setup]. 
+If you are not already running SnowPlow, we recommend setting up the SnowPlow CloudFront Collector, which is the simplest collector. There is a setup guide here: [Setting up the Cloudfront collector] [cf-collector-setup]. 
 
 ## 2. Making
 
@@ -36,7 +33,7 @@ Right, ...
 
 ## Roadmap
 
-Nothing planned. Hopefully this project inspires people to try monitoring their own home/factory/shop using Arduino and SnowPlow!
+Nothing planned. Hopefully this project inspires people to try monitoring their own home/office/factory/shop using Arduino and SnowPlow!
 
 ## Copyright and license
 
