@@ -25,7 +25,19 @@ If you are not already running SnowPlow, we recommend setting up the CloudFront-
 
 ## 2. Making
 
-First, ...
+First, attach your Arduino Ethernet or WiFi shield onto your Arduino. Then wire your TMP36 into your Arduino Ethernet or WiFi shield like so:
+
+[!schematic] [schematic]
+
+A couple of notes on this setup:
+
+* We are using 3.3V (and connecting ARef to the same) to get a more precise temperature reading than the standard 5V will
+* It's very important that you wire the TMP36 in the right way around, or else the TMP36 will malfunction and get very hot
+* This schematic was produced using the excellent [Fritzing desktop app] [fritzing] - for the source file see `/docs/arduino-temp-tracker.fzz`
+
+Once you have done this, your configuration should look something like this:
+
+[!photo] [photo]
 
 ## 3. Running
 
@@ -33,7 +45,7 @@ Right, ...
 
 ## Roadmap
 
-Nothing planned. Hopefully this project inspires people to try monitoring their own home/office/factory/shop using Arduino and SnowPlow!
+Nothing planned. Hopefully this project inspires you to try monitoring your own home/office/factory/shop using Arduino and SnowPlow!
 
 ## Copyright and license
 
@@ -55,6 +67,10 @@ limitations under the License.
 [ethernet-shield]: http://arduino.cc/en/Main/ArduinoEthernetShield
 [tmp36]: http://adafruit.com/products/165
 [oomlout-starter-kit]: http://oomlout.co.uk/starter-kit-for-arduino-ardx-p-183.html
+
+[schematic]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/arduino-temp-tracker.pngs
+[fritzing]: http://fritzing.org/download/
+[photo]: xxx
 
 [cf-collector-setup]: https://github.com/snowplow/snowplow/wiki/setting-up-the-cloudfront-collector
 
