@@ -2,6 +2,8 @@
 
 ## Introduction
 
+![arduino-logo] [arduino-logo]
+
 This is a simple Arduino sketch to take a room's temperature every minute and log it to [SnowPlow] [snowplow] using the [SnowPlow Arduino Tracker] [snowplow-arduino-tracker].
 
 ## Installation
@@ -59,6 +61,8 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+[arduino-logo]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/arduino-logo.png
 
 [snowplow]: http://snowplowanalytics.com/
 [snowplow-arduino-tracker]: https://github.com/snowplow/snowplow-arduino-tracker
