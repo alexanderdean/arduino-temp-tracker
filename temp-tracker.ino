@@ -34,7 +34,7 @@
 const byte kMac[] = { 0x90, 0xA2, 0xDA, 0x00, 0xF8, 0xA0 };
 
 // SnowPlow CloudFront collector subdomain
-const char kSnowplowCfSubdomain[] = "TODO";
+const char kSnowplowCfSubdomain[] = "d3rkrsqld9gmqf";
 
 // SnowPlow user ID (to identify this specific Arduino)
 const char kSnowplowUserId[] = "snowplow-office";
