@@ -12,9 +12,7 @@ To run this sketch, you will need the following hardware:
 
 * 1 x Arduino (I used an [Arduino Uno] [arduino-uno])
 * 1 x Ethernet or WiFi shield for Arduino (I used an [Ethernet shield] [ethernet-shield])
-* 1 x [TMP36] [tmp36] temperature sensor
-
-Many Arduino starter kits include the TMP36 sensor and instructions on configuring it (e.g. the [Oomlout Starter Kit] [oomlout-starter-kit]).
+* 1 x [TMP36] [tmp36] temperature sensor (mine came in the [Oomlout Starter Kit] [oomlout-starter-kit])
 
 In software terms, you will need:
 
