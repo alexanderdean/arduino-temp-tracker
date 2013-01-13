@@ -1,6 +1,8 @@
-![arduino-logo] [arduino-logo] <h1>Arduino Temperature Tracker</h1>
+# Arduino Temperature Tracker
 
 ## Introduction
+
+![arduino-logo] [arduino-logo] 
 
 This is a simple Arduino sketch to take a room's temperature every minute and log it to [SnowPlow] [snowplow] using the [SnowPlow Arduino Tracker] [snowplow-arduino-tracker].
 
