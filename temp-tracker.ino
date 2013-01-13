@@ -37,7 +37,7 @@ const byte kMac[] = { 0x90, 0xA2, 0xDA, 0x00, 0xF8, 0xA0 };
 const char kSnowplowCfSubdomain[] = "TODO";
 
 // SnowPlow user ID (to identify this specific Arduino)
-const char kSnowplowUserId[] = "living-room";
+const char kSnowplowUserId[] = "snowplow-office";
 
 /*
  * You probably won't have to update these
