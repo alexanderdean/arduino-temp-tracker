@@ -27,7 +27,7 @@ If you are not already running SnowPlow, we recommend setting up the CloudFront-
 
 First, attach your Arduino Ethernet or WiFi shield onto your Arduino. Then wire your TMP36 into your Arduino Ethernet or WiFi shield like so:
 
-[!schematic] [schematic]
+![schematic] [schematic]
 
 A couple of notes on this setup:
 
@@ -37,7 +37,7 @@ A couple of notes on this setup:
 
 Once you have done this, your configuration should look something like this:
 
-[!photo] [photo]
+![photo] [photo]
 
 ## 3. Running
 
