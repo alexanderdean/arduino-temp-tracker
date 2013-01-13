@@ -31,8 +31,8 @@ First, attach your Arduino Ethernet or WiFi shield onto your Arduino. Then wire 
 
 Some notes on this setup:
 
-* We use 3.3V (connecting ARef to the same) for a more precise temperature reading than 5V will give us
 * It's very important that you wire the TMP36 in the right way around, or else the TMP36 will malfunction and get very hot
+* We use 3.3V (connecting ARef to the same) for a more precise temperature reading than 5V will give us
 * This schematic was produced using [Fritzing] [fritzing] - the source file is `docs/arduino-temp-tracker.fzz`
 
 Finally, connect your Arduino board to your computer via USB, and connect your Ethernet or WiFi shield to your network.
