@@ -17,7 +17,7 @@ To run this sketch, you will need the following hardware:
 In software terms, you will need:
 
 * <<Something about SnowPlow library>>
-* A running SnowPlow event collector (to receive events sent by the Arduino Tracker)
+* A SnowPlow event collector (to receive events sent by the Arduino Tracker)
 
 If you are not already running SnowPlow, we recommend setting up the CloudFront-based event collector, which is SnowPlow's simplest collector. Checkout the guide here: [Setting up the Cloudfront Collector] [cf-collector-setup]. 
 
