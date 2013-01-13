@@ -10,14 +10,14 @@ This is a simple Arduino sketch to take a room's temperature every minute and lo
 
 To run this sketch, you will need the following hardware:
 
-* 1 x Arduino (I used an [Arduino Uno] [arduino-uno])
-* 1 x Ethernet or WiFi shield for Arduino (I used an [Ethernet shield] [ethernet-shield])
-* 1 x [TMP36] [tmp36] temperature sensor (mine came in the [Oomlout Starter Kit] [oomlout-starter-kit])
+1. An Arduino (I used an [Arduino Uno] [arduino-uno])
+2. An Ethernet or WiFi shield for Arduino (I used an [Ethernet shield] [ethernet-shield])
+3. An [TMP36] [tmp36] temperature sensor (mine came in the [Oomlout Starter Kit] [oomlout-starter-kit])
 
 In software terms, you will need:
 
-* <<Something about SnowPlow library>>
-* A SnowPlow event collector (to receive events sent by the Arduino Tracker)
+1. <<Something about SnowPlow library>>
+2. A SnowPlow event collector (to receive events sent by the Arduino Tracker)
 
 If you are not already running SnowPlow, we recommend setting up the CloudFront-based event collector, which is SnowPlow's simplest collector. Checkout the guide here: [Setting up the Cloudfront Collector] [cf-collector-setup]. 
 
