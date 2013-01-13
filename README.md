@@ -33,6 +33,8 @@ Some notes on this setup:
 * It's very important that you wire the TMP36 in the right way around, or else the TMP36 will malfunction and get very hot
 * This schematic was produced using [Fritzing] [fritzing] - the source file is `docs/arduino-temp-tracker.fzz`
 
+Finally, connect your Arduino board to your computer via USB, and connect your Ethernet or WiFi shield to your network.
+
 Once you have done this, your configuration should look something like this:
 
 ![photo] [photo]
