@@ -68,7 +68,7 @@ limitations under the License.
 [tmp36]: http://adafruit.com/products/165
 [oomlout-starter-kit]: http://oomlout.co.uk/starter-kit-for-arduino-ardx-p-183.html
 
-[schematic]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/arduino-temp-tracker.pngs
+[schematic]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/arduino-temp-tracker.png
 [fritzing]: http://fritzing.org/download/
 [photo]: xxx
 
