@@ -1,4 +1,4 @@
-![arduino-logo] [arduino-logo] # Arduino Temperature Tracker
+![arduino-logo] [arduino-logo] <h1>Arduino Temperature Tracker</h1>
 
 ## Introduction
 
