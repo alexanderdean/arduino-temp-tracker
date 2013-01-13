@@ -33,7 +33,7 @@ Some notes on this setup:
 
 * It's very important that you wire the TMP36 in the right way around, or else the TMP36 will malfunction and get very hot
 * We use 3.3V (connecting ARef to the same) for a more precise temperature reading than 5V will give us
-* This schematic was produced using [Fritzing] [fritzing] - the source file is `docs/arduino-temp-tracker.fzz`
+* This schematic was produced using [Fritzing] [fritzing] - the source file is `docs/arduino-schematic.fzz`
 
 Finally, connect your Arduino board to your computer via USB, and connect your Ethernet or WiFi shield to your network.
 
@@ -72,9 +72,9 @@ limitations under the License.
 [tmp36]: http://adafruit.com/products/165
 [oomlout-starter-kit]: http://oomlout.co.uk/starter-kit-for-arduino-ardx-p-183.html
 
-[schematic]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/arduino-temp-tracker.png
+[schematic]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/arduino-schematic.png
 [fritzing]: http://fritzing.org/download/
-[photo]: xxx
+[photo]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/arduino-photo.png
 
 [cf-collector-setup]: https://github.com/snowplow/snowplow/wiki/setting-up-the-cloudfront-collector
 
