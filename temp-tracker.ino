@@ -108,9 +108,9 @@ void loop()
     // Debug
     Serial.print(tempC); Serial.println(" degrees C");
 
-    // Track via SnowPlow
+    // Track via SnowPlow: category, action, label, property, value
     /*
-    snowplow.trackEvent("readings", "temp", tempC);
+    snowplow.trackEvent("readings", "temp", "C", NULL, tempC);
     */
 
     prevTime = millis();
