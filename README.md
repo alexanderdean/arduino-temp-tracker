@@ -29,7 +29,7 @@ First, attach your Arduino Ethernet or WiFi shield onto your Arduino. Then wire 
 
 ![schematic] [schematic]
 
-A couple of notes on this setup:
+Some notes on this setup:
 
 * We are using 3.3V (and connecting ARef to the same) to get a more precise temperature reading than the standard 5V will
 * It's very important that you wire the TMP36 in the right way around, or else the TMP36 will malfunction and get very hot
