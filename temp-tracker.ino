@@ -30,8 +30,8 @@
  * UPDATE THESE FOR YOUR SKETCH
  */
 
-// MAC address of this Arduino
-const byte kMac[] = { 0x90, 0xA2, 0xDA, 0x00, 0xF8, 0xA0 };
+// MAC address of this Arduino. Don't make const
+byte mac[] = { 0x90, 0xA2, 0xDA, 0x00, 0xF8, 0xA0 };
 
 // SnowPlow CloudFront collector subdomain
 const char kSnowplowCfSubdomain[] = "d3rkrsqld9gmqf";
@@ -56,7 +56,7 @@ const int kReadingFreq = 60;
 const char kSnowplowAppName[] = "arduino-temp-tracker";
 
 // SnowPlow Tracker
-// SnowPlowTracker snowplow(&Ethernet, kMac, kSnowplowAppName);
+// SnowPlowTracker snowplow(&Ethernet, mac, kSnowplowAppName);
 
 /*
  * setup() runs once when you turn your
