@@ -74,7 +74,7 @@ limitations under the License.
 
 [schematic]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/temp-tracker-schematic.png
 [fritzing]: http://fritzing.org/download/
-[photo]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/temp-tracker-photo.png
+[photo]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/temp-tracker-photo.jpg
 
 [cf-collector-setup]: https://github.com/snowplow/snowplow/wiki/setting-up-the-cloudfront-collector
 
