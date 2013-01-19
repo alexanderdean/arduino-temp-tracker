@@ -37,7 +37,7 @@ Some notes on this setup:
 
 Finally, connect your Arduino board to your computer via USB, and connect your Ethernet or WiFi shield to your network.
 
-Once you have done this, your configuration should look something like this:
+Once you have done this, your hardware configuration should look something like this:
 
 ![photo] [photo]
 
