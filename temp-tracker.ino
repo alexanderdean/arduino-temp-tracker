@@ -50,7 +50,7 @@ const float kArduinoV = 3.3;
 const int kSensorPin = 0;
 
 // Frequency of taking temperature readings, in seconds
-const int kReadingFreq = 60;
+const int kReadingFreq = 60; // Change to 5 for testing
 
 // SnowPlow app name
 const char kSnowplowAppName[] = "arduino-temp-tracker";
