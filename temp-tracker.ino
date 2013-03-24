@@ -24,23 +24,23 @@
 
 #include <SPI.h>
 #include <Ethernet.h>
-// #include <SnowPlow.h>
+#include <SnowPlowTracker.h>
 
 /*
  * UPDATE THESE FOR YOUR SKETCH
  */
 
-// MAC address of this Arduino. Don't make const
-byte mac[] = { 0x90, 0xA2, 0xDA, 0x00, 0xF8, 0xA0 };
+// MAC address of this Arduino
+const byte kMac[] = { 0x90, 0xA2, 0xDA, 0x00, 0xF8, 0xA0 };
 
 // SnowPlow CloudFront collector subdomain
 const char kSnowplowCfSubdomain[] = "d3rkrsqld9gmqf";
 
-// SnowPlow user ID (to identify this specific Arduino)
+// SnowPlow user ID (to identify this specific Arduino board if you have multiple ones)
 const char kSnowplowUserId[] = "snowplow-office";
 
 /*
- * You probably won't have to update these
+ * (You probably won't have to update these)
  */
 
 // The Arduino voltage (either 5.0 or a more accurate 3.3)
@@ -56,7 +56,7 @@ const int kReadingFreq = 60;
 const char kSnowplowAppName[] = "arduino-temp-tracker";
 
 // SnowPlow Tracker
-// SnowPlowTracker snowplow(&Ethernet, mac, kSnowplowAppName);
+SnowPlowTracker snowplow(&Ethernet, kMac, kSnowplowAppName);
 
 /*
  * setup() runs once when you turn your
@@ -80,10 +80,8 @@ void setup()
   }
 
   // Setup SnowPlow Arduino tracker
-  /*
   snowplow.initCf(kSnowplowCfSubdomain);
-  snowplow.setUserId(kSnowplowUserId); // If not set, defaults to Mac address.
-  */
+  snowplow.setUserId(kSnowplowUserId);
 }
  
 /*
@@ -108,10 +106,8 @@ void loop()
     // Debug
     Serial.print(tempC); Serial.println(" degrees C");
 
-    // Track via SnowPlow: category, action, label, property, value
-    /*
-    snowplow.trackEvent("readings", "temp", "C", NULL, tempC);
-    */
+    // Track via SnowPlow: category, action, label, property, value, precision
+    snowplow.trackStructEvent("readings", "temp", "C", NULL, tempC, 2);
 
     prevTime = millis();
   }
