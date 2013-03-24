@@ -81,10 +81,6 @@ Now click **Tools > Serial Monitor** and after a few seconds you should start se
 
 Great - the sketch is working and sending temperature information to SnowPlow!
 
-### 3.5 Final steps
-
-To come.
-
 ## Roadmap
 
 Nothing planned. Hopefully this project inspires you to try monitoring your own home/office/factory/shop using Arduino and SnowPlow!
