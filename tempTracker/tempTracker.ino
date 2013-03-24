@@ -39,6 +39,9 @@ const char kSnowplowCfSubdomain[] = "d3rkrsqld9gmqf";
 // SnowPlow user ID (to identify this specific Arduino board if you have multiple ones)
 const char kSnowplowUserId[] = "alex-study";
 
+// Frequency of taking temperature readings, in seconds
+const int kReadingFreq = 60; // Change to 5 for testing
+
 /*
  * (You probably won't have to update these)
  */
@@ -48,9 +51,6 @@ const float kArduinoV = 3.3;
 
 // The analog pin to which the TMP36's Vout (sense) pin is connected
 const int kSensorPin = 0;
-
-// Frequency of taking temperature readings, in seconds
-const int kReadingFreq = 60; // Change to 5 for testing
 
 // SnowPlow app name
 const char kSnowplowAppName[] = "arduino-temp-tracker";
