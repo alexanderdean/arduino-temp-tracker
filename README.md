@@ -18,10 +18,9 @@ To run this sketch, you will need the following hardware:
 
 In software terms, you will need:
 
-1. <<Something about SnowPlow library>>
-2. A SnowPlow event collector (to receive events sent by the Arduino Tracker)
-
-If you are not already running SnowPlow, we recommend setting up the CloudFront-based event collector, which is SnowPlow's simplest collector. Checkout the guide here: [Setting up the Cloudfront Collector] [cf-collector-setup]. 
+1. The sketch in this repository, `temp-tracker.ino`
+2. The [SnowPlow Arduino Tracker] [snowplow-arduino-tracker] library
+2. A [SnowPlow event collector] [snowplow-collectors] (to receive events sent by the Arduino Tracker)
 
 ## 2. Making
 
@@ -42,6 +41,20 @@ Once you have done this, your hardware configuration should look something like 
 ![photo] [photo]
 
 ## 3. Running
+
+### 3.1 SnowPlow Arduino Tracker library
+
+You will need the [SnowPlow Arduino Tracker] [snowplow-arduino-tracker] library installed in the Arduino "libraries" folder on the computer connected to your Arduino.
+
+To install this library, please check out the guide here: [Arduino Tracker Setup] [tracker-setup-guide] on the SnowPlow wiki.
+
+### 3.2 SnowPlow event collector
+
+If you are not already running SnowPlow, you can setup the CloudFront-based event collector, which is SnowPlow's simplest collector. Checkout the guide here: [Setting up the Cloudfront Collector] [cf-collector-setup] on the SnowPlow wiki. 
+
+### 3.3 The sketch
+
+Download the `[temp-tracker.ino] [sketch]` sketch in this GitHub repository and open it in
 
 Right, ...
 
@@ -77,5 +90,9 @@ limitations under the License.
 [photo]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/temp-tracker-photo.jpg
 
 [cf-collector-setup]: https://github.com/snowplow/snowplow/wiki/setting-up-the-cloudfront-collector
+[tracker-setup-guide]: https://github.com/snowplow/snowplow/wiki/Arduino-Tracker-Setup
+[snowplow-collectors]: https://github.com/snowplow/snowplow/wiki/Setting-up-a-collector
+
+[sketch]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/temp-tracker.ino
 
 [license]: http://www.apache.org/licenses/LICENSE-2.0
