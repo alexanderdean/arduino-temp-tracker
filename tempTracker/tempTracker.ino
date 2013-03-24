@@ -10,7 +10,7 @@
  * * http://learn.adafruit.com/tmp36-temperature-sensor/using-a-temp-sensor
  * * http://exosite.com/project/basic-arduino-temperature-web-monitor
  *
- * Copyright (c) 2012 Alexander Dean. All rights reserved.
+ * Copyright (c) 2012-2013 Alexander Dean. All rights reserved.
  *
  * This program is licensed to you under the Apache License Version 2.0,
  * and you may not use this file except in compliance with the Apache License Version 2.0.

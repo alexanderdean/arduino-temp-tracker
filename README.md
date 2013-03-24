@@ -18,7 +18,7 @@ To run this sketch, you will need the following hardware:
 
 In software terms, you will need:
 
-1. The sketch in this repository, `temp-tracker.ino`
+1. The sketch in this repository, [`tempTracker.ino`] [sketch]
 2. The [SnowPlow Arduino Tracker] [snowplow-arduino-tracker] library
 2. A [SnowPlow event collector] [snowplow-collectors] (to receive events sent by the Arduino Tracker)
 
@@ -54,9 +54,24 @@ If you are not already running SnowPlow, you can setup the CloudFront-based even
 
 ### 3.3 The sketch
 
-Download the `[temp-tracker.ino] [sketch]` sketch in this GitHub repository and open it in
+Download the [`tempTracker.ino`] [sketch] sketch in this GitHub repository to your computer.
 
-Right, ...
+Open it in your Arduino environment - when prompted, agree to create a folder called "tempTracker".
+
+Now scroll down a little and edit these variables:
+
+![edit] [edit]
+
+Specifically:
+
+1. Update `kMac` to the MAC address printed on your Arduino Ethernet or Wi-Fi shield
+2. Update `kSnowplowCfSubdomain` to the CloudFront subdomain which your SnowPlow collector is hosted on
+3. Update `kSnowplowUserId` to describe which room you will be monitoring for temperature
+4. For testing purposes, you can change `kReadingFreq` to 5 to be able to check your temperature readings faster. Don't forget to change it back to 60 (or even 300 or higher) later
+
+Done? Now you're ready to hit **File > Upload** to load the sketch onto your Arduino.
+
+Now click **Tools > Serial Monitor** and after a few seconds
 
 ## Roadmap
 
@@ -87,12 +102,14 @@ limitations under the License.
 
 [schematic]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/temp-tracker-schematic.png
 [fritzing]: http://fritzing.org/download/
+
 [photo]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/temp-tracker-photo.jpg
+[edit]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/arduino-edit.png
 
 [cf-collector-setup]: https://github.com/snowplow/snowplow/wiki/setting-up-the-cloudfront-collector
 [tracker-setup-guide]: https://github.com/snowplow/snowplow/wiki/Arduino-Tracker-Setup
 [snowplow-collectors]: https://github.com/snowplow/snowplow/wiki/Setting-up-a-collector
 
-[sketch]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/temp-tracker.ino
+[sketch]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/tempTracker/tempTracker.ino
 
 [license]: http://www.apache.org/licenses/LICENSE-2.0
