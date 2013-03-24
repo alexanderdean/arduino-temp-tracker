@@ -79,7 +79,7 @@ Now click **Tools > Serial Monitor** and after a few seconds you should start se
 
 ![console] [console]
 
-Great - the sketch is working and sending temperature information to SnowPlow! My study is a bit chilly - I need to turn up the central heating.
+Great - the sketch is working and sending temperature information to SnowPlow!
 
 ### 3.5 Final steps
 
