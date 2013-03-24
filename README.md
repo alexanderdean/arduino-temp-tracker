@@ -69,9 +69,21 @@ Specifically:
 3. Update `kSnowplowUserId` to describe which room you will be monitoring for temperature
 4. For testing purposes, you can change `kReadingFreq` to 5 to be able to check your temperature readings faster. Don't forget to change it back to 60 (or even 300 or higher) later
 
-Done? Now you're ready to hit **File > Upload** to load the sketch onto your Arduino.
+Done? Now you're ready to test!
 
-Now click **Tools > Serial Monitor** and after a few seconds
+### 3.4 Testing
+
+Hit **File > Upload** to load the sketch onto your Arduino.
+
+Now click **Tools > Serial Monitor** and after a few seconds you should start seeing the following:
+
+![console] [console]
+
+Great - the sketch is working and sending temperature information to SnowPlow! My study is a bit chilly - I need to turn up the central heating.
+
+### 3.5 Final steps
+
+To come.
 
 ## Roadmap
 
@@ -105,6 +117,7 @@ limitations under the License.
 
 [photo]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/temp-tracker-photo.jpg
 [edit]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/arduino-edit.png
+[console]: https://raw.github.com/alexanderdean/arduino-temp-tracker/master/docs/arduino-console.png
 
 [cf-collector-setup]: https://github.com/snowplow/snowplow/wiki/setting-up-the-cloudfront-collector
 [tracker-setup-guide]: https://github.com/snowplow/snowplow/wiki/Arduino-Tracker-Setup
